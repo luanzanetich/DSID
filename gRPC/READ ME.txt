@@ -1,0 +1,15 @@
+1. Instale as dependências necessárias executando o seguinte comando:
+
+pip install grpcio grpcio-tools
+
+Após isso, basta executar o código server.py em um terminal, e os clientes em outro.
+
+Executar servidior:
+##para iniciar, basta chamar a função com parâmetro 0 para abrir na porta padrão,
+##ou parâmetro 1 para escolher a porta desejada. (python server.py 1 --port 50)
+
+Executar clientes:
+##para iniciar, basta chamar a função com parâmetro 0 para conectar no localhost porta padrão,
+##ou parâmetro 1 para escolher o ip e a porta desejada. (python clientVoid.py 1 --ip 192.1968.1.45 --port 50)
+
+

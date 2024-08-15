@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+package proto;
+
+message Long {
+  int64 value = 1;
+}
+
+service LongMessageService {
+  rpc SendLong(Long) returns (Long);
+}
+
+message EightLong {
+  int64 value_1 = 1;
+  int64 value_2 = 2;
+  int64 value_3 = 3;
+  int64 value_4 = 4;
+  int64 value_5 = 5;
+  int64 value_6 = 6;
+  int64 value_7 = 7;
+  int64 value_8 = 8;
+}
+
+service EightLongMessageService {
+  rpc SendLong(EightLong) returns (Long);
+}
+
+service VoidMessage {
+  rpc SendVoid(Void) returns (Void);
+}
+
+message Void {
+
+}
+
+service StringMessageService {
+    rpc SendString(StringMessage) returns (StringMessage) {}
+}
+
+
+message StringMessage {
+    string value = 1;
+}
+
+service MovieMessageService {
+  rpc SendMovie(Movie) returns (Movie);
+}
+
+message Movie {
+  int64 id = 1;
+  string title = 2;
+  string genre = 3;
+  string director = 4;
+  repeated Actor actors = 5;
+  int32 duration = 6;
+  bool foiEnviado = 7;
+}
+
+message Actor {
+  int64 id = 1;
+  string name = 2;
+  string surname = 3;
+  repeated string character_name = 4;
+}
